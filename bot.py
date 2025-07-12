@@ -14,8 +14,8 @@ from data_manager import get_user_data, update_user_data
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
-MISSION_CHANNEL_ID = os.getenv("MISSION_CHANNEL_ID")  # ミッションチャンネル
-ALLOWED_ONLY_CHANNEL_ID = os.getenv("ALLOWED_ONLY_CHANNEL_ID")  # 制限チャットチャンネル
+MISSION_CHANNEL_ID = int(os.getenv("MISSION_CHANNEL_ID"))  # ミッションチャンネル
+ALLOWED_ONLY_CHANNEL_ID = int(os.getenv("ALLOWED_ONLY_CHANNEL_ID"))  # 制限チャットチャンネル
 
 intents = discord.Intents.default()
 intents.messages = True
