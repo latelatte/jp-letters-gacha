@@ -2,376 +2,451 @@
   {
     "kana": "あ",
     "roumaji": "a",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "い",
     "roumaji": "i",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "う",
     "roumaji": "u",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "え",
     "roumaji": "e",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "お",
     "roumaji": "o",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "か",
     "roumaji": "ka",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "き",
     "roumaji": "ki",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "く",
     "roumaji": "ku",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "け",
     "roumaji": "ke",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "こ",
     "roumaji": "ko",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "さ",
     "roumaji": "sa",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "し",
     "roumaji": "shi",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "す",
     "roumaji": "su",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "せ",
     "roumaji": "se",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "そ",
     "roumaji": "so",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "た",
     "roumaji": "ta",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ち",
     "roumaji": "chi",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "つ",
     "roumaji": "tsu",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "て",
     "roumaji": "te",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "と",
     "roumaji": "to",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "な",
     "roumaji": "na",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "に",
     "roumaji": "ni",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ぬ",
     "roumaji": "nu",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ね",
     "roumaji": "ne",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "の",
     "roumaji": "no",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "は",
     "roumaji": "ha",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ひ",
     "roumaji": "hi",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ふ",
     "roumaji": "hu",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "へ",
     "roumaji": "he",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ほ",
     "roumaji": "ho",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ま",
     "roumaji": "ma",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "み",
     "roumaji": "mi",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "む",
     "roumaji": "mu",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "め",
     "roumaji": "me",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "も",
     "roumaji": "mo",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "や",
     "roumaji": "ya",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ゆ",
     "roumaji": "yu",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "よ",
     "roumaji": "yo",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ら",
     "roumaji": "ra",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "り",
     "roumaji": "ri",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "る",
     "roumaji": "ru",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "れ",
     "roumaji": "re",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ろ",
     "roumaji": "ro",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "わ",
     "roumaji": "wa",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "を",
     "roumaji": "wo",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "ん",
     "roumaji": "n",
-    "type": "gojuuon"
+    "type": "gojuuon",
+    "rarity": "N"
   },
   {
     "kana": "が",
     "roumaji": "ga",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぎ",
     "roumaji": "gi",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぐ",
     "roumaji": "gu",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "げ",
     "roumaji": "ge",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ご",
     "roumaji": "go",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ざ",
     "roumaji": "za",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "じ",
     "roumaji": "ji",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ず",
     "roumaji": "zu",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぜ",
     "roumaji": "ze",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぞ",
     "roumaji": "zo",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "だ",
     "roumaji": "da",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぢ",
     "roumaji": "ji",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "づ",
     "roumaji": "zu",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "で",
     "roumaji": "de",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ど",
     "roumaji": "do",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ば",
     "roumaji": "ba",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "び",
     "roumaji": "bi",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぶ",
     "roumaji": "bu",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "べ",
     "roumaji": "be",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぼ",
     "roumaji": "bo",
-    "type": "dakuon"
+    "type": "dakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぱ",
     "roumaji": "pa",
-    "type": "handakuon"
+    "type": "handakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぴ",
     "roumaji": "pi",
-    "type": "handakuon"
+    "type": "handakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぷ",
     "roumaji": "pu",
-    "type": "handakuon"
+    "type": "handakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぺ",
     "roumaji": "pe",
-    "type": "handakuon"
+    "type": "handakuon",
+    "rarity": "N"
   },
   {
     "kana": "ぽ",
     "roumaji": "po",
-    "type": "handakuon"
+    "type": "handakuon",
+    "rarity": "N"
   },
   {
     "kana": "っ",
     "roumaji": "(pause)",
-    "type": "sokuon"
+    "type": "sokuon",
+    "rarity": "N"
   },
   {
     "kana": "ゃ",
     "roumaji": "ya",
-    "type": "youon"
+    "type": "youon",
+    "rarity": "N"
   },
   {
     "kana": "ゅ",
     "roumaji": "yu",
-    "type": "youon"
+    "type": "youon",
+    "rarity": "N"
   },
   {
     "kana": "ょ",
     "roumaji": "yo",
-    "type": "youon"
+    "type": "youon",
+    "rarity": "N"
   }
 ]
