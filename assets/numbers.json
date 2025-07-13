@@ -1,0 +1,402 @@
+[
+  {
+    "character": "0",
+    "type": "arabic",
+    "value": 0,
+    "reading": "ゼロ",
+    "romaji": "zero",
+    "rarity": "N"
+  },
+  {
+    "character": "1",
+    "type": "arabic",
+    "value": 1,
+    "reading": "イチ",
+    "romaji": "ichi",
+    "rarity": "N"
+  },
+  {
+    "character": "2",
+    "type": "arabic",
+    "value": 2,
+    "reading": "ニ",
+    "romaji": "ni",
+    "rarity": "N"
+  },
+  {
+    "character": "3",
+    "type": "arabic",
+    "value": 3,
+    "reading": "サン",
+    "romaji": "san",
+    "rarity": "N"
+  },
+  {
+    "character": "4",
+    "type": "arabic",
+    "value": 4,
+    "reading": "ヨン",
+    "romaji": "yon",
+    "rarity": "N"
+  },
+  {
+    "character": "5",
+    "type": "arabic",
+    "value": 5,
+    "reading": "ゴ",
+    "romaji": "go",
+    "rarity": "N"
+  },
+  {
+    "character": "6",
+    "type": "arabic",
+    "value": 6,
+    "reading": "ロク",
+    "romaji": "roku",
+    "rarity": "N"
+  },
+  {
+    "character": "7",
+    "type": "arabic",
+    "value": 7,
+    "reading": "ナナ",
+    "romaji": "nana",
+    "rarity": "N"
+  },
+  {
+    "character": "8",
+    "type": "arabic",
+    "value": 8,
+    "reading": "ハチ",
+    "romaji": "hachi",
+    "rarity": "N"
+  },
+  {
+    "character": "9",
+    "type": "arabic",
+    "value": 9,
+    "reading": "キュウ",
+    "romaji": "kyuu",
+    "rarity": "N"
+  },
+  {
+    "character": "零",
+    "type": "kanji",
+    "value": 0,
+    "reading": "レイ",
+    "romaji": "rei",
+    "rarity": "R"
+  },
+  {
+    "character": "一",
+    "type": "kanji",
+    "value": 1,
+    "reading": "イチ",
+    "romaji": "ichi",
+    "rarity": "R"
+  },
+  {
+    "character": "二",
+    "type": "kanji",
+    "value": 2,
+    "reading": "ニ",
+    "romaji": "ni",
+    "rarity": "R"
+  },
+  {
+    "character": "三",
+    "type": "kanji",
+    "value": 3,
+    "reading": "サン",
+    "romaji": "san",
+    "rarity": "R"
+  },
+  {
+    "character": "四",
+    "type": "kanji",
+    "value": 4,
+    "reading": "シ",
+    "romaji": "shi",
+    "rarity": "R"
+  },
+  {
+    "character": "五",
+    "type": "kanji",
+    "value": 5,
+    "reading": "ゴ",
+    "romaji": "go",
+    "rarity": "R"
+  },
+  {
+    "character": "六",
+    "type": "kanji",
+    "value": 6,
+    "reading": "ロク",
+    "romaji": "roku",
+    "rarity": "R"
+  },
+  {
+    "character": "七",
+    "type": "kanji",
+    "value": 7,
+    "reading": "シチ",
+    "romaji": "shichi",
+    "rarity": "R"
+  },
+  {
+    "character": "八",
+    "type": "kanji",
+    "value": 8,
+    "reading": "ハチ",
+    "romaji": "hachi",
+    "rarity": "R"
+  },
+  {
+    "character": "九",
+    "type": "kanji",
+    "value": 9,
+    "reading": "キュウ",
+    "romaji": "kyuu",
+    "rarity": "R"
+  },
+  {
+    "character": "十",
+    "type": "kanji",
+    "value": 10,
+    "reading": "ジュウ",
+    "romaji": "juu",
+    "rarity": "R"
+  },
+  {
+    "character": "百",
+    "type": "kanji",
+    "value": 100,
+    "reading": "ヒャク",
+    "romaji": "hyaku",
+    "rarity": "SR"
+  },
+  {
+    "character": "千",
+    "type": "kanji",
+    "value": 1000,
+    "reading": "セン",
+    "romaji": "sen",
+    "rarity": "SR"
+  },
+  {
+    "character": "万",
+    "type": "kanji",
+    "value": 10000,
+    "reading": "マン",
+    "romaji": "man",
+    "rarity": "SR"
+  },
+  {
+    "character": "壱",
+    "type": "daiji",
+    "value": 1,
+    "reading": "イチ",
+    "romaji": "ichi",
+    "rarity": "SR"
+  },
+  {
+    "character": "弐",
+    "type": "daiji",
+    "value": 2,
+    "reading": "ニ",
+    "romaji": "ni",
+    "rarity": "SR"
+  },
+  {
+    "character": "参",
+    "type": "daiji",
+    "value": 3,
+    "reading": "サン",
+    "romaji": "san",
+    "rarity": "SR"
+  },
+  {
+    "character": "肆",
+    "type": "daiji",
+    "value": 4,
+    "reading": "シ",
+    "romaji": "shi",
+    "rarity": "SSR"
+  },
+  {
+    "character": "伍",
+    "type": "daiji",
+    "value": 5,
+    "reading": "ゴ",
+    "romaji": "go",
+    "rarity": "SSR"
+  },
+  {
+    "character": "陸",
+    "type": "daiji",
+    "value": 6,
+    "reading": "ロク",
+    "romaji": "roku",
+    "rarity": "SSR"
+  },
+  {
+    "character": "漆",
+    "type": "daiji",
+    "value": 7,
+    "reading": "シチ",
+    "romaji": "shichi",
+    "rarity": "SSR"
+  },
+  {
+    "character": "捌",
+    "type": "daiji",
+    "value": 8,
+    "reading": "ハチ",
+    "romaji": "hachi",
+    "rarity": "SSR"
+  },
+  {
+    "character": "玖",
+    "type": "daiji",
+    "value": 9,
+    "reading": "キュウ",
+    "romaji": "kyuu",
+    "rarity": "SSR"
+  },
+  {
+    "character": "拾",
+    "type": "daiji",
+    "value": 10,
+    "reading": "ジュウ",
+    "romaji": "juu",
+    "rarity": "SSR"
+  },
+  {
+    "character": "億",
+    "type": "kanji",
+    "value": 100000000,
+    "reading": "オク",
+    "romaji": "oku",
+    "rarity": "SSR"
+  },
+  {
+    "character": "兆",
+    "type": "kanji",
+    "value": 1000000000000,
+    "reading": "チョウ",
+    "romaji": "chou",
+    "rarity": "SSR"
+  },
+  {
+    "character": "京",
+    "type": "kanji",
+    "value": 10000000000000000,
+    "reading": "ケイ",
+    "romaji": "kei",
+    "rarity": "SSR"
+  },
+  {
+    "character": "垓",
+    "type": "kanji",
+    "value": 100000000000000000000,
+    "reading": "ガイ",
+    "romaji": "gai",
+    "rarity": "SSR"
+  },
+  {
+    "character": "Ⅰ",
+    "type": "roman",
+    "value": 1,
+    "reading": "イチ",
+    "romaji": "ichi",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅱ",
+    "type": "roman",
+    "value": 2,
+    "reading": "ニ",
+    "romaji": "ni",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅲ",
+    "type": "roman",
+    "value": 3,
+    "reading": "サン",
+    "romaji": "san",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅳ",
+    "type": "roman",
+    "value": 4,
+    "reading": "ヨン",
+    "romaji": "yon",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅴ",
+    "type": "roman",
+    "value": 5,
+    "reading": "ゴ",
+    "romaji": "go",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅵ",
+    "type": "roman",
+    "value": 6,
+    "reading": "ロク",
+    "romaji": "roku",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅶ",
+    "type": "roman",
+    "value": 7,
+    "reading": "ナナ",
+    "romaji": "nana",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅷ",
+    "type": "roman",
+    "value": 8,
+    "reading": "ハチ",
+    "romaji": "hachi",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅸ",
+    "type": "roman",
+    "value": 9,
+    "reading": "キュウ",
+    "romaji": "kyuu",
+    "rarity": "SR"
+  },
+  {
+    "character": "Ⅹ",
+    "type": "roman",
+    "value": 10,
+    "reading": "ジュウ",
+    "romaji": "juu",
+    "rarity": "SSR"
+  },
+  {
+    "character": "Ⅺ",
+    "type": "roman",
+    "value": 11,
+    "reading": "ジュウイチ",
+    "romaji": "juuichi",
+    "rarity": "SSR"
+  },
+  {
+    "character": "Ⅻ",
+    "type": "roman",
+    "value": 12,
+    "reading": "ジュウニ",
+    "romaji": "juuni",
+    "rarity": "SSR"
+  }
+]

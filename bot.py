@@ -41,7 +41,8 @@ async def load_extensions():
         "commands.admin",
         "commands.points",
         "commands.mission",
-        "commands.bonus"
+        "commands.bonus",
+        "commands.event_management"
     ]:
         try:
             await bot.load_extension(ext)

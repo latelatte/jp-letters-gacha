@@ -1,0 +1,34 @@
+{
+  "current_event": "roman_numbers_2025_07",
+  "events": {
+    "roman_numbers_2025_07": {
+      "active": true,
+      "start_date": "2025-07-13",
+      "end_date": "2025-07-27",
+      "title": "数字実装記念ローマ数字ガチャ",
+      "description": "ローマ数字がピックアップ！このイベント限定で排出されるレアな数字文字たちを集めよう！",
+      "characters": [
+        "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"
+      ],
+      "event_exclusive": true,
+      "exclude_from_normal_gacha": [
+        "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ", "Ⅺ", "Ⅻ"
+      ],
+      "pickup_rate_percentage": 40.0,
+      "rarity_overrides": {
+        "Ⅰ": "N",
+        "Ⅱ": "N",
+        "Ⅲ": "N",
+        "Ⅳ": "R",
+        "Ⅴ": "R",
+        "Ⅵ": "R",
+        "Ⅶ": "SR",
+        "Ⅷ": "SR",
+        "Ⅸ": "SR",
+        "Ⅹ": "SSR",
+        "Ⅺ": "SSR",
+        "Ⅻ": "SSR"
+      }
+    }
+  }
+}

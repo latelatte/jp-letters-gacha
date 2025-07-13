@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import app_commands, Interaction
 from logics.normal_gacha import run_gacha, run_gacha10
-from logics.pickup_gacha import run_gacha_pickup, run_gacha_pickup10
+from logics.pickup_gacha import run_gacha_pickup, run_gacha_pickup10, show_pickup_info
 from logics.ssr_gacha import run_gacha_ssr
 
 class GachaCommands(commands.Cog):
@@ -32,6 +32,10 @@ class GachaCommands(commands.Cog):
     @app_commands.default_permissions(administrator=True)
     async def gacha_ssr(self, interaction: Interaction):
         await run_gacha_ssr(interaction)
+
+    @app_commands.command(name="pickup_info", description="現在開催中のピックアップガチャの情報を表示するよ！")
+    async def pickup_info(self, interaction: Interaction):
+        await show_pickup_info(interaction)
 
 async def setup(bot):
     await bot.add_cog(GachaCommands(bot))

@@ -4,7 +4,7 @@ from logics.data_manager import get_user_data, update_user_data
 from logics.gacha_utils import get_weight, add_ssr_points, draw_weighted_char
 from logics.char_loader import load_char_sets
 
-hiragana_chars, katakana_chars, jouyou_chars, rarity_map = load_char_sets()
+hiragana_chars, katakana_chars, jouyou_chars, numbers_chars, rarity_map = load_char_sets()
 
 def draw_random_char():
     letter = draw_weighted_char()
