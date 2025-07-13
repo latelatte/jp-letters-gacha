@@ -31,7 +31,7 @@ class MissionListener(commands.Cog):
                 warn_msg = await message.channel.send(
                     f"{message.author.mention} ❌ 持ってない文字が含まれているよ！\n"
                     f"（使えなかった文字: {'、'.join(sorted(illegal_chars))}）\n"
-                    f"※このメッセージは10秒後に自動で消えます"
+                    f"※このメッセージは10秒後に自動で消えます。"
                 )
                 await warn_msg.delete(delay=10)
                 return
@@ -39,7 +39,12 @@ class MissionListener(commands.Cog):
         # ===== ミッション回答処理 =====
         if message.channel.id == get_channel_id("mission"):
             content = message.content.strip()
-            await message.delete()
+            
+            # メッセージ削除を試行（権限がない場合はスキップ）
+            try:
+                await message.delete()
+            except discord.Forbidden:
+                pass  # 権限がない場合は無視して続行
 
             user = get_user_data(message.author.id)
             today = str(date.today())
@@ -54,9 +59,14 @@ class MissionListener(commands.Cog):
                     user["mission_cleared"] = today
                     update_user_data(message.author.id, user)
                     msg = await message.channel.send(
-                        f"{message.author.mention} 🎉 正解！10ポイント付与されたよ！（現在: {user['points']}pt）"
+                        f"{message.author.mention} 🥳 正解！10ポイント付与されたよ！（現在: {user['points']}pt）"
                     )
-                
+            else:
+                msg = await message.channel.send(
+                    f"{message.author.mention} ❌ 不正解みたいです…。\n"
+                    f"全角カタカナで入力されているか確認してください！\n"
+                    f"※このメッセージは5秒後に自動で消えます。"
+                )
 
             await msg.delete(delay=5)
             return
