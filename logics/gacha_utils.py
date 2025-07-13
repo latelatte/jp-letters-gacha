@@ -13,11 +13,11 @@ for ch in jouyou_chars:
     rarity_map.setdefault(ch, "N-kanji")
 
 RARITY_WEIGHTS = {
-    "SSR": 1,
-    "SR": 3,
+    "SSR": 0.5,
+    "SR": 1,
     "R": 10,
-    "N-hira": 6,
-    "N-kanji": 1
+    "N-hira": 7,
+    "N-kanji": 2
 }
 
 def get_weight(rarity: str) -> int:

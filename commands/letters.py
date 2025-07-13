@@ -50,7 +50,7 @@ class LettersCommands(commands.Cog):
                 display = " ".join(chars[:10])
                 if len(chars) > 10:
                     display += "…"
-                lines.append(f"{rarity}：{display}")
+                lines.append(f"{rarity}（{len(chars)}個）：{display}")
         result = "\n".join(lines) if lines else "まだ何も当たってないよ〜🥺"
         await interaction.response.send_message(result, ephemeral=True)
 

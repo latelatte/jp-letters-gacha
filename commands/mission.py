@@ -5,9 +5,7 @@ import discord
 from discord.ext import commands
 from datetime import date
 
-from logics.data_manager import get_user_data, update_user_data, get_channel_id
-
-current_answer = "あかさたな"  # ダミー
+from logics.data_manager import get_user_data, update_user_data, get_channel_id, get_current_answer
 
 class MissionListener(commands.Cog):
     def __init__(self, bot):
@@ -39,6 +37,7 @@ class MissionListener(commands.Cog):
         # ===== ミッション回答処理 =====
         if message.channel.id == get_channel_id("mission"):
             content = message.content.strip()
+            current_answer = get_current_answer()
             
             # メッセージ削除を試行（権限がない場合はスキップ）
             try:
@@ -66,6 +65,7 @@ class MissionListener(commands.Cog):
                     f"{message.author.mention} ❌ 不正解みたいです…。\n"
                     f"全角カタカナで入力されているか確認してください！\n"
                     f"※このメッセージは5秒後に自動で消えます。"
+                    
                 )
 
             await msg.delete(delay=5)

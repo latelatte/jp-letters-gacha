@@ -10,14 +10,13 @@ from pathlib import Path
 ASSETS_DIR = Path("./assets")
 ASSETS_DIR.mkdir(exist_ok=True)
 
-from logics.data_manager import get_user_data, update_user_data
+from logics.data_manager import get_user_data, update_user_data, set_current_answer
 from views.gacha_view import GachaView
-
-current_answer = ""
 
 # 管理者用コマンド群
 class AdminCommands(commands.Cog):
     @app_commands.command(name="setup_login_channel", description="ログインボタンをこのチャンネルに設置します（管理者用）")
+    @app_commands.default_permissions(administrator=True)
     @app_commands.checks.has_permissions(administrator=True)
     async def setup_login_channel(self, interaction: discord.Interaction):
         view = discord.ui.View()
@@ -31,7 +30,7 @@ class AdminCommands(commands.Cog):
         self.bot = bot
 
     # 管理者用: 任意でポイント増減
-    @commands.command(name="addpoint")
+    @commands.command(name="add")
     @commands.has_permissions(administrator=True)
     async def add_point(self, ctx, amount: int):
         # 指定があればその人に、なければ自分に
@@ -40,10 +39,32 @@ class AdminCommands(commands.Cog):
         user["points"] += amount
         update_user_data(target.id, user)
 
-        await ctx.send(f"{target.mention} のポイントを {amount:+} 変動しました！(現在: {user['points']}pt)")
+        await ctx.send(f"{target.mention} のポイントを {amount:+} 変動しました！(現在: {user['points']}pt / SSR限定: {user.get('ssr_points', 0)}pt)")
 
     @add_point.error
     async def add_point_error(self, ctx, error):
+        if isinstance(error, CheckFailure):
+            await ctx.send("🚫 このコマンドは管理者しか使えないよ〜")
+
+    # 管理者用: SSR限定ポイント増減
+    @commands.command(name="addssr")
+    @commands.has_permissions(administrator=True)
+    async def add_ssr_point(self, ctx, amount: int):
+        # 指定があればその人に、なければ自分に
+        target = ctx.message.mentions[0] if ctx.message.mentions else ctx.author
+        user = get_user_data(target.id)
+        
+        # SSR限定ポイントを初期化（存在しない場合）
+        if "ssr_points" not in user:
+            user["ssr_points"] = 0
+        
+        user["ssr_points"] += amount
+        update_user_data(target.id, user)
+
+        await ctx.send(f"{target.mention} のSSR限定ポイントを {amount:+} 変動しました！(現在: {user['points']}pt / SSR限定: {user['ssr_points']}pt)")
+
+    @add_ssr_point.error
+    async def add_ssr_point_error(self, ctx, error):
         if isinstance(error, CheckFailure):
             await ctx.send("🚫 このコマンドは管理者しか使えないよ〜")
 
@@ -51,16 +72,19 @@ class AdminCommands(commands.Cog):
     async def points(self, interaction: discord.Interaction):
         user_data = get_user_data(interaction.user.id)
         await interaction.response.send_message(
-            f"💠 {interaction.user.display_name} の所持ポイント：**{user_data['points']}pt**", ephemeral=True
+            f"💠 {interaction.user.display_name} の所持ポイント：**{user_data['points']}pt** / SSR限定: **{user_data.get('ssr_points', 0)}pt**", 
+            ephemeral=True
         )
 
     @app_commands.command(name="sync", description="スラッシュコマンドを同期するよ（管理者専用）")
+    @app_commands.default_permissions(administrator=True)
     @app_commands.checks.has_permissions(administrator=True)
     async def sync_commands(self, interaction: discord.Interaction):
         synced = await self.bot.tree.sync()
         await interaction.response.send_message(f"✅ コマンド {len(synced)} 件を同期したよ〜", ephemeral=True)
 
     @app_commands.command(name="post_gacha_buttons", description="指定チャンネルにガチャボタン常設メッセージを送る（管理者専用）")
+    @app_commands.default_permissions(administrator=True)
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.describe(channel="ガチャポストを送信するチャンネル", mode="ガチャボタンのモード (normal/pickup/ssr)")
     async def post_gacha_buttons(
@@ -75,11 +99,12 @@ class AdminCommands(commands.Cog):
 
     @app_commands.command(name="set_answer", description="ミッションの正解を設定する（管理者専用）")
     @app_commands.describe(answer="新しい正解文字列")
+    @app_commands.default_permissions(administrator=True)
     @app_commands.checks.has_permissions(administrator=True)
     async def set_answer(self, interaction: discord.Interaction, answer: str):
-        global current_answer
-        current_answer = answer.strip()
-        await interaction.response.send_message(f"✅ 新しい正解を設定したよ：**{current_answer}**", ephemeral=True)
+        answer = answer.strip()
+        set_current_answer(answer)
+        await interaction.response.send_message(f"✅ 新しい正解を設定したよ：**{answer}**", ephemeral=True)
 
     @set_answer.error
     async def set_answer_error(self, interaction: discord.Interaction, error):
@@ -89,6 +114,7 @@ class AdminCommands(commands.Cog):
 
     @app_commands.command(name="set_channel", description="ミッションや制限チャンネルのIDを設定（管理者専用）")
     @app_commands.describe(kind="設定するチャンネルの種類", channel="設定したいチャンネル")
+    @app_commands.default_permissions(administrator=True)
     @app_commands.checks.has_permissions(administrator=True)
     async def set_channel(self, interaction: discord.Interaction, kind: Literal["mission", "restricted"], channel: discord.TextChannel):
         config_path = Path("./assets/channel_config.json")

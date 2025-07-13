@@ -59,3 +59,20 @@ def get_channel_id(kind):
     config = load_channel_config()
     key = "mission_channel_id" if kind == "mission" else "restricted_channel_id"
     return config.get(key)
+
+# ミッション正解管理
+def get_current_answer():
+    """現在のミッション正解を取得"""
+    config = load_channel_config()
+    return config.get("current_answer", "あかさたな")  # デフォルト値
+
+def set_current_answer(answer):
+    """ミッション正解を設定"""
+    config = load_channel_config()
+    config["current_answer"] = answer
+    
+    if not os.path.exists(CHANNEL_CONFIG_FILE):
+        CHANNEL_CONFIG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(CHANNEL_CONFIG_FILE, "w", encoding="utf-8") as f:
+        json.dump(config, f, ensure_ascii=False, indent=2)

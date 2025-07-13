@@ -9,6 +9,8 @@ from views.gacha_view import GachaView
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
+if not TOKEN:
+    raise ValueError("DISCORD_TOKEN が設定されていません") # こうしないとリンターがうるさい
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -22,7 +24,12 @@ async def on_ready():
     try:
         synced = await bot.tree.sync()
         print(f"✅ Slash commands synced: {len(synced)}コマンド")
-        bot.add_view(GachaView())  # 永続ボタンの登録
+        
+        bot.add_view(GachaView("normal"))   # 通常ガチャ
+        bot.add_view(GachaView("pickup"))   # ピックアップガチャ
+        bot.add_view(GachaView("ssr"))      # SSR限定ガチャ
+        
+        print("✅ 永続ビューを登録しました")
     except Exception as e:
         print(f"Error syncing commands: {e}")
     print(f"Logged in as {bot.user}")
@@ -45,7 +52,10 @@ async def load_extensions():
 async def main():
     async with bot:
         await load_extensions()
-        await bot.start(TOKEN)
+        if TOKEN:
+            await bot.start(TOKEN)
+        else:
+            raise ValueError("DISCORD_TOKEN が設定されていません") # ここもリンターが怒る
 
 if __name__ == "__main__":
     asyncio.run(main())
