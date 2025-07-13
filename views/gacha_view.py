@@ -2,6 +2,7 @@ import discord
 from logics.normal_gacha import run_gacha, run_gacha10
 from logics.pickup_gacha import run_gacha_pickup, run_gacha_pickup10
 from logics.ssr_gacha import run_gacha_ssr
+from commands.bonus import login_bonus
 
 from typing import Literal
 
@@ -53,3 +54,10 @@ class SsrGachaButton(discord.ui.Button):
 
     async def callback(self, interaction: discord.Interaction):
         await run_gacha_ssr(interaction)
+        
+class LoginBonusButton(discord.ui.Button):
+    def __init__(self):
+        super().__init__(label="ログインボーナス🎁", style=discord.ButtonStyle.success, custom_id="login_bonus_button")
+
+    async def callback(self, interaction: discord.Interaction):
+        await login_bonus(interaction)

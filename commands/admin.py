@@ -17,6 +17,16 @@ current_answer = ""
 
 # 管理者用コマンド群
 class AdminCommands(commands.Cog):
+    @app_commands.command(name="setup_login_channel", description="ログインボタンをこのチャンネルに設置します（管理者用）")
+    @app_commands.checks.has_permissions(administrator=True)
+    async def setup_login_channel(self, interaction: discord.Interaction):
+        view = discord.ui.View()
+        view.add_item(discord.ui.Button(label="ログインボーナスを受け取る", custom_id="login_bonus_button", style=discord.ButtonStyle.success))
+        await interaction.response.send_message(
+            "📝 このチャンネルはログイン確認専用です。\n以下のボタンからログインボーナスを受け取ってください！",
+            view=view,
+            ephemeral=False
+        )
     def __init__(self, bot):
         self.bot = bot
 

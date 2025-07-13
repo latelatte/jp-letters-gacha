@@ -4,12 +4,20 @@ from logics.char_loader import load_char_sets
 
 hiragana_chars, katakana_chars, jouyou_chars, rarity_map = load_char_sets()
 
-# レアリティごとの重み付け
+# hiragana には明示的な rarity がなければ N-hira を割り当てる
+for ch in hiragana_chars:
+    rarity_map.setdefault(ch, "N-hira")
+
+# jouyou（常用漢字）も同様に
+for ch in jouyou_chars:
+    rarity_map.setdefault(ch, "N-kanji")
+
 RARITY_WEIGHTS = {
     "SSR": 1,
     "SR": 3,
-    "R": 6,
-    "N": 10
+    "R": 10,
+    "N-hira": 6,
+    "N-kanji": 1
 }
 
 def get_weight(rarity: str) -> int:
@@ -31,23 +39,25 @@ def draw_ssr_char():
 def draw_weighted_char():
     from collections import defaultdict
 
-    all_chars = set(hiragana_chars + katakana_chars + jouyou_chars)
+    # レアリティごとの文字グループを作成
     rarity_groups = defaultdict(list)
+    all_chars = set(hiragana_chars + katakana_chars + jouyou_chars + list(rarity_map.keys()))
     for ch in all_chars:
-        rarity = rarity_map.get(ch, "N")
+        rarity = rarity_map.get(ch, "N-kanji")
         rarity_groups[rarity].append(ch)
+        
 
-    chars = []
-    weights = []
-
+    # レアリティと対応する重みをリスト化
+    rarities = []
+    rarity_weights = []
     for rarity, group in rarity_groups.items():
-        base_weight = get_weight(rarity)
-        group_size = len(group)
-        if group_size == 0:
-            continue
-        weight_per_char = base_weight / math.sqrt(group_size)
-        for ch in group:
-            chars.append(ch)
-            weights.append(weight_per_char)
+        if group:
+            rarities.append(rarity)
+            rarity_weights.append(get_weight(rarity))
 
-    return random.choices(chars, weights=weights, k=1)[0]
+
+    # レアリティを重み付きで1つ選ぶ
+    selected_rarity = random.choices(rarities, weights=rarity_weights, k=1)[0]
+
+    # そのレアリティに属する文字から1つ選ぶ
+    return random.choice(rarity_groups[selected_rarity])

@@ -23,4 +23,4 @@ async def run_gacha_ssr(interaction: discord.Interaction):
         msg = f"🎉 {interaction.user.mention} がSSR限定ガチャを引いた！\n→ **「{ssr_char}」** をGET！\n(残りSSR限ポイント: {user['ssr_points']})"
 
     update_user_data(interaction.user.id, user)
-    await interaction.response.send_message(msg)
+    await interaction.response.send_message(msg, ephemeral=True)

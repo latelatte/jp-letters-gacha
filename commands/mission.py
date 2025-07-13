@@ -56,10 +56,7 @@ class MissionListener(commands.Cog):
                     msg = await message.channel.send(
                         f"{message.author.mention} 🎉 正解！10ポイント付与されたよ！（現在: {user['points']}pt）"
                     )
-            else:
-                msg = await message.channel.send(
-                    f"{message.author.mention} ❌ 残念、不正解だったよ〜"
-                )
+                
 
             await msg.delete(delay=5)
             return

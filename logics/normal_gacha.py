@@ -51,6 +51,8 @@ async def run_gacha10(interaction: discord.Interaction):
         letter, rarity = draw_random_char()
         if letter in user["letters"]:
             results.append(f"😮 {letter}（{rarity}, 重複）")
+            bonus = add_ssr_points(user, rarity)
+            results[-1] += f" → SSR限ポイント {bonus}pt付与（現在: {user['ssr_points']}pt）"
         else:
             user["letters"].append(letter)
             results.append(f"🎊 {letter}（{rarity}）")
@@ -59,4 +61,4 @@ async def run_gacha10(interaction: discord.Interaction):
     update_user_data(interaction.user.id, user)
     summary = f"{interaction.user.mention} の10連ガチャ結果（新規 {new_count} / 10）\n残りポイント: {user['points']}\n\n"
     result_text = summary + "\n".join(results)
-    await interaction.response.send_message(result_text)
+    await interaction.response.send_message(result_text, ephemeral=True)
