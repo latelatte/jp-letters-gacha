@@ -1,5 +1,31 @@
 # jp-letters-gacha
 
+## データの永続化（Heroku対応）
+
+Herokuのエフェメラルファイルシステムでもデータが永続化されるよう、GitHub Gistを使用してユーザーデータを保存しています。
+
+### 環境変数の設定
+
+`.env`ファイルに以下の環境変数を設定してください：
+
+```env
+DISCORD_TOKEN=your_discord_bot_token_here
+GITHUB_TOKEN=your_github_personal_access_token_here
+GIST_ID=your_gist_id_here
+```
+
+### GitHub Personal Access Tokenの作成
+
+1. GitHubの Settings > Developer settings > Personal access tokens > Tokens (classic)
+2. "Generate new token" をクリック
+3. スコープで `gist` を選択
+4. 生成されたトークンを `GITHUB_TOKEN` として設定
+
+### Gist IDの取得
+
+作成したGistのURLから ID を取得：
+`https://gist.github.com/username/ここがGist_ID`
+
 ## ガチャボタン設定
 
 ガチャボタンの表示文字列とメッセージは `assets/gacha_button_config.json` で管理されています。

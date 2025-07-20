@@ -22,6 +22,10 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 @bot.event
 async def on_ready():
     try:
+        # データマネージャーを初期化（Gistとの同期）
+        from logics.data_manager import init_data_manager
+        init_data_manager()
+        
         synced = await bot.tree.sync()
         print(f"✅ Slash commands synced: {len(synced)}コマンド")
         
