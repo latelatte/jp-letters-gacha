@@ -89,9 +89,3 @@ GistのIDについては、作成したGistのURLから ID を取得してくだ
 ## 📝 ライセンス
 
 このプロジェクトは [MIT License](LICENSE) の下でライセンスされています。
-
-#### イベント告知
-
-```bash
-/event_announce channel:#events event_title:春祭りガチャイベント event_description:桜をテーマにした特別なガチャイベントが開催中！ start_date:2024年3月20日 00:00 end_date:2024年3月31日 23:59 special_info:期間中は桜関連の文字が2倍出やすくなります🌸
-```
